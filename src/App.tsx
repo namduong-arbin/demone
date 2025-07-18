@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-function getRandomChanLe(): string[] {
+function getRandom(): string[] {
   const result: string[] = [];
   const options: string[] = ['   chẳn  ', '   lẽ   '];
 
@@ -15,7 +15,7 @@ function getRandomChanLe(): string[] {
   return result;
 }
 function App() {
-  const [count, setCount] = useState(() => getRandomChanLe());
+  const [count, setCount] = useState(() => getRandom());
 
   return (
     <>
@@ -31,7 +31,7 @@ function App() {
         <div style={{ padding: 4, border: '1px solid' }}>
           {count.toString()}
         </div>
-        <button onClick={() => setCount(getRandomChanLe())}>reload</button>
+        <button onClick={() => setCount(getRandom())}>reload</button>
       </div>
     </>
   );
